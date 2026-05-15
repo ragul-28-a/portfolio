@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragul Arivazhagan | Data Analyst Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fixed Background Color to replace body background -->
+    <div id="bg-color-layer"></div>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="part1.mp4" type="video/mp4">
+    </video>
+
+    <!-- Background Canvas for Particles/Animations -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Flying Robot Animation -->
+    <div class="flying-robot"><i class="fas fa-robot"></i></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Ragul<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section-padding reveal">
+        <div class="hero-content">
+            <h3 class="subtitle">Hello, I am</h3>
+            <h1 class="title">Ragul Arivazhagan</h1>
+            <h2 class="role">Data Analyst, Data Scientist & Web Developer</h2>
+            <p class="description">
+                Founder of <strong>Arimara Tech Solution</strong>. Transforming raw data into actionable insights through advanced analytics, machine learning, and visualization.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/ragul-a-90aa9929a" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ragul-28-a" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="blob-wrapper">
+                <img src="profile.jpg" alt="Ragul Arivazhagan - Founder of ARM Tech" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding reveal">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-container glass-card">
+            <div class="about-text">
+                <p>
+                    I am a highly motivated <strong>Data Analyst and Data Scientist</strong> with a strong foundation in Artificial Intelligence and Machine Learning. Having recently completed my B.E in CSE (AI & ML), I am passionate about discovering patterns in complex datasets to drive strategic decisions.
+                </p>
+                <p>
+                    I have started my journey into freelancing to deliver high-quality data solutions and <strong>Website Development</strong> services to clients worldwide. As the Founder of <strong>Arimara Tech Solution</strong>, I strive to provide cutting-edge technological services, leveraging my skills in data science, predictive modeling, and web technologies.
+                </p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Freelancer</h4>
+                    <p>Data & Web Projects</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-building"></i>
+                    <h4>Arimara Tech</h4>
+                    <p>Solution</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="timeline-section section-padding reveal">
+        <div class="timeline-container">
+            <!-- Experience Timeline -->
+            <div class="timeline-column">
+                <h2 class="section-title"><span>Experience</span></h2>
+                <div class="timeline">
+                    <!-- Freelancing -->
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <h3 class="timeline-title">Freelance Data Scientist & Web Developer</h3>
+                        <h4 class="timeline-subtitle">Arimara Tech Solution</h4>
+                        <span class="timeline-date">Present</span>
+                        <ul class="timeline-list">
+                            <li>Delivering high-quality data science solutions and predictive modeling for clients.</li>
+                            <li>Providing professional website development services to build strong online presences.</li>
+                            <li>Driving strategic decisions using advanced analytics and machine learning.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Internship -->
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <h3 class="timeline-title">Data Science Intern</h3>
+                        <h4 class="timeline-subtitle">Besant Technologies</h4>
+                        <span class="timeline-date">2026 – Present</span>
+                        <ul class="timeline-list">
+                            <li>Performed data analysis and visualization using MS Excel, and Power BI.</li>
+                            <li>Applied data cleaning and preprocessing techniques on real-world datasets.</li>
+                            <li>Developed dashboards and reports to generate meaningful insights.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="timeline-column">
+                <h2 class="section-title"><span>Education</span></h2>
+                <div class="timeline">
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <h3 class="timeline-title">B.E - CSE (AI & ML)</h3>
+                        <h4 class="timeline-subtitle">Paavai College of Engineering, Namakkal</h4>
+                        <span class="timeline-date">Graduated 2026</span>
+                        <p>CGPA: 7.55</p>
+                    </div>
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <h3 class="timeline-title">HSC (12th)</h3>
+                        <h4 class="timeline-subtitle">Government Higher Secondary School, Veeramangudi</h4>
+                        <span class="timeline-date">2022</span>
+                        <p>Percentage: 67.3%</p>
+                    </div>
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <h3 class="timeline-title">SSLC (10th)</h3>
+                        <h4 class="timeline-subtitle">Government Higher Secondary School, Veeramangudi</h4>
+                        <span class="timeline-date">2020</span>
+                        <p>Percentage: 76%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding reveal">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+            <div class="project-card glass-card">
+                <div class="project-image">
+                    <img src="fetal-health.png" alt="AI Fetal Health">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3 class="project-title">AI-Based Fetal Health Monitoring System</h3>
+                    <p class="project-desc">
+                        Developed an AI-based fetal health prediction system using Cardiotocography (CTG) data and Multi-Layer Perceptron (MLP) neural networks.
+                    </p>
+                    <p class="project-desc">
+                        Implemented data preprocessing, model training, and real-time classification of fetal conditions into Normal, Suspect, and Pathological categories to support early risk detection and clinical decision-making.
+                    </p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>MLP</span>
+                        <span>Data Preprocessing</span>
+                        <span>Classification</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TN Schemes Dashboard Project -->
+            <div class="project-card glass-card">
+                <div class="project-image">
+                    <img src="tn-schemes.png" alt="TN Schemes Dashboard">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="project-title">TN Schemes Dashboard</h3>
+                    <p class="project-desc">
+                        A professional, responsive web-based dashboard for Tamil Nadu government schemes built using HTML, CSS, and JavaScript.
+                    </p>
+                    <p class="project-desc">
+                        Features secure user authentication, a personalized settings page, global search functionality, and light/dark theme switching for an enhanced user experience.
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="project-links" style="margin-top: 15px;">
+                        <a href="https://tn-schemes.vercel.app/" target="_blank" class="btn primary-btn" style="padding: 8px 16px; font-size: 0.9rem;">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section-padding reveal">
+        <h2 class="section-title"><span>Achievements</span></h2>
+        <div class="achievement-card glass-card">
+            <i class="fas fa-award achievement-icon"></i>
+            <div class="achievement-details">
+                <h3>Rajya Puraskar Award From Governor of Tamil Nadu</h3>
+                <span class="achievement-date">2019</span>
+                <ul>
+                    <li>Awarded the prestigious Rajya Puraskar for excellence in Bharat Scouts and Guides.</li>
+                    <li>Recognized by the Governor of Tamil Nadu (Award No: RPS/2018/72/11376).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding reveal">
+        <h2 class="section-title">Get in <span>Touch</span></h2>
+        <div class="contact-container">
+            <div class="contact-info glass-card">
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>9688098250</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>ragula717@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Thanjavur, Tamil Nadu</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p><a href="https://www.linkedin.com/in/ragul-a-90aa9929a" target="_blank">linkedin.com/in/ragul-a-90aa9929a</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h4>Github</h4>
+                        <p><a href="https://github.com/ragul-28-a" target="_blank">github.com/ragul-28-a</a></p>
+                    </div>
+                </div>
+
+                <!-- Availability Status -->
+                <div class="availability-status">
+                    <div class="status-indicator">
+                        <span class="pulse"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div>
+                        <h4>Available for Work</h4>
+                        <p>Accepting new freelance projects</p>
+                    </div>
+                </div>
+            </div>
+            
+            <form action="mailto:ragula717@gmail.com" method="POST" enctype="text/plain" class="contact-form glass-card">
+                <h3>Send a Message</h3>
+                
+                <div class="input-group">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
+                
+                <div style="margin-top: 25px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <p style="margin-bottom: 15px; font-size: 0.95rem;">Have a freelance project in mind?</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdBbNdII8iTsBFYOHWZuDFPR3U0H-CMuE96K_IbdU0mbf6J5w/viewform?usp=publish-editor" target="_blank" class="btn secondary-btn btn-full" style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+                        Fill out Project Inquiry Form <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ragul Arivazhagan | Arimara Tech Solution. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
