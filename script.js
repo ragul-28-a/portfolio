@@ -220,3 +220,91 @@ function animate() {
 // Start animation
 initParticles();
 animate();
+
+// ===== PROJECTS CAROUSEL LOGIC =====
+const track = document.querySelector('.carousel-track');
+if (track) {
+    const items = Array.from(track.children);
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dotsContainer = document.querySelector('.carousel-dots');
+
+    let currentIndex = 0;
+
+    // Reset styles from ring
+    track.style.transform = '';
+    items.forEach(item => item.style.transform = '');
+
+    // Create dots
+    items.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === currentIndex) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.children);
+
+    function updateCarousel() {
+        items.forEach((item, index) => {
+            item.classList.remove('active', 'next', 'prev');
+            item.style.opacity = '';
+            item.style.pointerEvents = '';
+            
+            if (index === currentIndex) {
+                item.classList.add('active');
+            } else if (index === (currentIndex + 1) % items.length) {
+                item.classList.add('next');
+            } else if (index === (currentIndex - 1 + items.length) % items.length) {
+                item.classList.add('prev');
+            }
+        });
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    // Click on next/prev items to bring them to center
+    items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            if (item.classList.contains('next') || item.classList.contains('prev')) {
+                currentIndex = index;
+                updateCarousel();
+            }
+        });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel();
+    });
+
+    // Auto rotation right to left (circle rotation)
+    let autoRotate = setInterval(() => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+    }, 4000);
+
+    // Pause auto rotation on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    carouselContainer.addEventListener('mouseenter', () => clearInterval(autoRotate));
+    carouselContainer.addEventListener('mouseleave', () => {
+        autoRotate = setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        }, 4000);
+    });
+
+    // Initialize carousel classes properly
+    updateCarousel();
+}
