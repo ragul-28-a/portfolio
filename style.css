@@ -472,21 +472,138 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 }
 
 /* ===== PROJECTS SECTION ===== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 50px auto 0; /* Added 50px top margin to separate from heading */
+    height: 700px;
+    perspective: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.carousel-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 600px; /* Wider rectangular landscape shape */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(0) scale(0.6) translateZ(-400px) rotateY(0deg);
+    pointer-events: none;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 5;
+    transform: translateX(0) scale(1) translateZ(0) rotateY(0deg);
+    pointer-events: auto;
+}
+
+.carousel-item.next {
+    opacity: 0.5; /* light color transparent */
+    z-index: 4;
+    transform: translateX(350px) scale(0.85) translateZ(-150px) rotateY(-25deg);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.carousel-item.prev {
+    opacity: 0.5;
+    z-index: 4;
+    transform: translateX(-350px) scale(0.85) translateZ(-150px) rotateY(25deg);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.carousel-item .project-card {
+    background: rgba(11, 15, 25, 0.95);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.carousel-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.carousel-btn:hover {
+    background: var(--primary-color);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+    transform: scale(1.1);
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel-dots .dot.active {
+    background: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    transform: scale(1.2);
 }
 
 .project-card {
     position: relative;
     overflow: hidden;
     padding: 0; /* Reset padding for full-width image */
+    border-radius: 20px;
 }
 
 .project-image {
     width: 100%;
-    height: 220px;
+    height: 300px; /* Taller for the wide landscape layout */
     overflow: hidden;
     position: relative;
 }
@@ -780,4 +897,11 @@ footer {
     
     .achievement-icon { margin-bottom: 20px; }
     .achievement-details ul { margin-left: 0; list-style-position: inside; }
+
+    /* Carousel mobile responsiveness */
+    .carousel-container { height: 750px; }
+    .carousel-item { width: 90%; max-width: 380px; }
+    .project-image { height: 200px; }
+    .carousel-item.next { transform: translateX(160px) scale(0.85) translateZ(-150px) rotateY(-15deg); }
+    .carousel-item.prev { transform: translateX(-160px) scale(0.85) translateZ(-150px) rotateY(15deg); }
 }
