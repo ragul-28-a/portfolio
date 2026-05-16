@@ -160,53 +160,94 @@
     <!-- Projects Section -->
     <section id="projects" class="projects section-padding reveal">
         <h2 class="section-title">Featured <span>Projects</span></h2>
-        <div class="projects-grid">
-            <div class="project-card glass-card">
-                <div class="project-image">
-                    <img src="fetal-health.png" alt="AI Fetal Health">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- AI Fetal Health Project -->
+                <div class="carousel-item active">
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="fetal-health.png" alt="AI Fetal Health">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+                            <h3 class="project-title">AI-Based Fetal Health Monitoring System</h3>
+                            <p class="project-desc">
+                                Developed an AI-based fetal health prediction system using Cardiotocography (CTG) data and Multi-Layer Perceptron (MLP) neural networks.
+                            </p>
+                            <p class="project-desc">
+                                Implemented data preprocessing, model training, and real-time classification of fetal conditions into Normal, Suspect, and Pathological categories.
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>MLP</span>
+                                <span>Data Preprocessing</span>
+                                <span>Classification</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-content">
-                    <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3 class="project-title">AI-Based Fetal Health Monitoring System</h3>
-                    <p class="project-desc">
-                        Developed an AI-based fetal health prediction system using Cardiotocography (CTG) data and Multi-Layer Perceptron (MLP) neural networks.
-                    </p>
-                    <p class="project-desc">
-                        Implemented data preprocessing, model training, and real-time classification of fetal conditions into Normal, Suspect, and Pathological categories to support early risk detection and clinical decision-making.
-                    </p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>MLP</span>
-                        <span>Data Preprocessing</span>
-                        <span>Classification</span>
+
+                <!-- TN Schemes Dashboard Project -->
+                <div class="carousel-item next">
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="tn-schemes.png" alt="TN Schemes Dashboard">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+                            <h3 class="project-title">TN Schemes Dashboard</h3>
+                            <p class="project-desc">
+                                A professional, responsive web-based dashboard for Tamil Nadu government schemes built using HTML, CSS, and JavaScript.
+                            </p>
+                            <p class="project-desc">
+                                Features secure user authentication, a personalized settings page, global search functionality, and light/dark theme switching.
+                            </p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Dashboard</span>
+                            </div>
+                            <div class="project-links" style="margin-top: 15px;">
+                                <a href="https://tn-schemes.vercel.app/" target="_blank" class="btn primary-btn" style="padding: 8px 16px; font-size: 0.9rem;">View Project <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Commerce Website Project -->
+                <div class="carousel-item prev">
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="ecommerce-project.png" alt="E-Commerce Website">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <h3 class="project-title">Modern E-Commerce Platform</h3>
+                            <p class="project-desc">
+                                A modern, attractive, and premium e-commerce website featuring a sleek storefront with dynamic aesthetics and responsive design.
+                            </p>
+                            <p class="project-desc">
+                                Built with cutting-edge web technologies, focusing on high-quality product displays, glassmorphism UI elements, and an exceptional user experience.
+                            </p>
+                            <div class="project-tags">
+                                <span>Frontend</span>
+                                <span>UI/UX</span>
+                                <span>Web Design</span>
+                                <span>E-Commerce</span>
+                            </div>
+                            <div class="project-links" style="margin-top: 15px;">
+                                <a href="https://e-commerce-coral-two-48.vercel.app/" target="_blank" class="btn primary-btn" style="padding: 8px 16px; font-size: 0.9rem;">View Project <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- TN Schemes Dashboard Project -->
-            <div class="project-card glass-card">
-                <div class="project-image">
-                    <img src="tn-schemes.png" alt="TN Schemes Dashboard">
-                </div>
-                <div class="project-content">
-                    <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3 class="project-title">TN Schemes Dashboard</h3>
-                    <p class="project-desc">
-                        A professional, responsive web-based dashboard for Tamil Nadu government schemes built using HTML, CSS, and JavaScript.
-                    </p>
-                    <p class="project-desc">
-                        Features secure user authentication, a personalized settings page, global search functionality, and light/dark theme switching for an enhanced user experience.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Dashboard</span>
-                    </div>
-                    <div class="project-links" style="margin-top: 15px;">
-                        <a href="https://tn-schemes.vercel.app/" target="_blank" class="btn primary-btn" style="padding: 8px 16px; font-size: 0.9rem;">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-dots"></div>
+                <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
