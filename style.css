@@ -20,7 +20,7 @@
 }
 
 html, body {
-    background-color: var(--bg-color);
+    background-color: transparent;
     color: var(--text-color);
     overflow-x: hidden;
     width: 100%;
@@ -46,10 +46,10 @@ html, body {
 /* Background Color Layer */
 #bg-color-layer {
     position: fixed;
-    top: 0;
+    top: -10vh;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-color: var(--bg-color);
     z-index: -3;
 }
