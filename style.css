@@ -851,11 +851,23 @@ footer {
 @media (max-width: 1024px) {
     .section-padding { padding: 80px 5%; }
     .hero-content { max-width: 50%; }
-    .title { font-size: 3.5rem; }
-    .role { font-size: 2rem; }
+    .title { font-size: 3.2rem; }
+    .role { font-size: 1.8rem; }
+    
+    .hero-image {
+        width: 350px;
+        height: 350px;
+    }
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
 }
 
 @media (max-width: 768px) {
+    .section-padding { padding: 60px 5%; }
+    .section-title { font-size: 2.5rem; margin-bottom: 2rem; }
+    
     .menu-toggle { display: block; }
     
     .nav-links {
@@ -864,11 +876,12 @@ footer {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background: var(--bg-color);
+        background: rgba(11, 15, 25, 0.95);
+        backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transition: 0.5s;
+        transition: 0.5s ease-in-out;
     }
 
     .nav-links.active { left: 0; }
@@ -876,18 +889,36 @@ footer {
     .hero {
         flex-direction: column-reverse;
         text-align: center;
-        padding-top: 150px;
+        padding-top: 120px;
     }
     
     .hero-content {
         max-width: 100%;
-        margin-top: 40px;
+        margin-top: 30px;
     }
     
-    .hero-buttons { justify-content: center; }
+    .title { font-size: 2.8rem; }
+    .role { font-size: 1.5rem; }
+    
+    .hero-image {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+    
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .hero-buttons { 
+        justify-content: center; 
+        flex-wrap: wrap;
+    }
     
     .about-container, .timeline-container, .contact-container {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .achievement-card {
@@ -895,13 +926,57 @@ footer {
         text-align: center;
     }
     
-    .achievement-icon { margin-bottom: 20px; }
-    .achievement-details ul { margin-left: 0; list-style-position: inside; }
+    .achievement-icon { margin-bottom: 10px; }
+    .achievement-details ul { margin-left: 0; list-style-position: inside; text-align: left; }
 
     /* Carousel mobile responsiveness */
-    .carousel-container { height: 750px; }
-    .carousel-item { width: 90%; max-width: 380px; }
-    .project-image { height: 200px; }
-    .carousel-item.next { transform: translateX(160px) scale(0.85) translateZ(-150px) rotateY(-15deg); }
-    .carousel-item.prev { transform: translateX(-160px) scale(0.85) translateZ(-150px) rotateY(15deg); }
+    .carousel-container { 
+        height: 600px; 
+        margin-top: 30px;
+    }
+    .carousel-item { 
+        width: 95%; 
+        max-width: 400px; 
+    }
+    .project-image { height: 220px; }
+    
+    /* Hide the 3D overlapping side cards on mobile for a cleaner look */
+    .carousel-item.next { 
+        opacity: 0; 
+        pointer-events: none; 
+        transform: translateX(100px) scale(0.8); 
+    }
+    .carousel-item.prev { 
+        opacity: 0; 
+        pointer-events: none; 
+        transform: translateX(-100px) scale(0.8); 
+    }
+    
+    .contact-form { padding: 20px; }
+}
+
+@media (max-width: 480px) {
+    .title { font-size: 2.2rem; }
+    .role { font-size: 1.2rem; }
+    .description { font-size: 1rem; }
+    
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .carousel-container { height: 650px; }
+    
+    .btn { padding: 10px 20px; font-size: 0.9rem; }
+    
+    .timeline { margin-left: 10px; padding-left: 20px; }
+    .timeline-dot { left: -32px; width: 16px; height: 16px; }
+    
+    .project-content { padding: 20px; }
+    .project-title { font-size: 1.3rem; }
 }
